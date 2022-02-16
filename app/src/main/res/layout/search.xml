@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="92">
+
+    <Button
+        android:id="@+id/search_gomain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="이전으로"
+        android:layout_weight="8"/>
+
+    <TextView
+        android:id="@+id/search_nouse1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="제조사"
+        android:textSize="15sp"
+        android:layout_weight="4"/>
+
+    <Spinner
+        android:id="@+id/spinner_manufacturer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/search_nouse2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:text="모델명" />
+
+    <Spinner
+        android:visibility="invisible"
+        android:id="@+id/spinner_modelname"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"/>
+
+    <TextView
+        android:id="@+id/search_nouse3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="세부모델"
+        android:layout_weight="4"/>
+
+    <Spinner
+        android:id="@+id/spinner_modelname_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"/>
+
+    <Button
+        android:id="@+id/search_complete"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:text="검색하기" />
+
+    <Button
+        android:id="@+id/gojava"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:text="Button"
+        tools:visibility="gone" />
+
+    <ScrollView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="37">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="30">
+
+            <ListView
+                android:id="@+id/search_listview1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="30" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/container"></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#345E86"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#f6d170"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</LinearLayout>
